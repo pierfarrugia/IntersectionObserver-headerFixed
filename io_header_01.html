@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IntersectionObserver - Header fixed</title>
+</head>
+
+<style>
+	*, *:before, *:after { box-sizing: border-box; }
+	html, body {
+		margin: 0;
+		min-height: 100%;
+	}
+	body {
+		padding: 0;
+		background-color: #202020;
+		color: white;
+	}
+	section {
+		margin: 0;
+		padding: 0;
+		height: 100vh;
+	}
+	#heroe {
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+	header, footer {
+		background-color: black;
+		text-align: center;
+	}
+	header {
+		height: 75px;
+	}
+	footer {
+		height: 50px;
+	}
+	section:nth-child(even) {
+		background-color: #202020;
+	}
+	section:nth-child(odd) {
+		background-color: #505050;
+	}
+
+	.fixed-top {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 995;
+	}
+	.scrolled-offset {
+		margin-top: 75px;
+	}
+
+</style>
+
+<body>
+
+<section id="heroe">
+	<div style="text-align: center">
+		<p>heroe</p>
+		<br>
+		<p>scroll down to see it in action</p>
+		<p style="font-size: 2em">&#8659;</p>
+	</div>
+</section>
+
+<!-- that's the element to observe, sentinel Header, an empty element -->
+<div class="sentinelHeader"></div>
+
+<header id="header">
+	<div style="text-align: center">header</div>
+</header>
+
+<section class="item">
+	<div style="text-align: center">section 1</div>
+</section>
+
+<section class="item">
+	<div style="text-align: center">section 2</div>
+</section>
+
+<footer>
+	<div style="text-align: center">footer</div>
+</footer>
+
+<script>
+	/* ============== header observe: observe ============== */
+    const observerHeader = new IntersectionObserver(function (entries, self) {
+        //select the 2 elements we'll need
+        let selectHeader = document.querySelector('#header');
+        let nextElement = selectHeader.nextElementSibling;
+        //loop through the entries observed
+        entries.forEach(entry => {
+            //check scrollY > 50 to avoid strange behaviour on mobile, and Chrome margin
+            if (window.scrollY > 50) {
+                if (entry.isIntersecting) {
+                    //if intersecting, meaning sentinelHeader in viewport, we remove the 2 class
+                    selectHeader.classList.remove('fixed-top');
+                    nextElement.classList.remove('scrolled-offset');
+                } else {
+                    //if not intersecting, meaning sentinelHeader in outside viewport, we add the 2 class
+                    selectHeader.classList.add('fixed-top');
+                    nextElement.classList.add('scrolled-offset');
+                }
+            }
+        });
+    }, {
+        root: null, // that's the standard
+        threshold: 0, // 0 means 0% of target is visible, standard is 1
+        rootMargin: '0px' // that's the standard
+    });
+
+	/* ============== header observe: init ============== */
+    const initOberverHeader = () => {
+        observerHeader.observe(document.querySelector('.sentinelHeader'));
+    }
+
+	/* ============== header observe: launch init at load ============== */
+    window.addEventListener('load', initOberverHeader);
+
+</script>
+</body>
+</html>
