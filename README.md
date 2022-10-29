@@ -5,12 +5,16 @@ Classical way is to use CSS “sticky” to fix header on top of screen. Main pr
 
 Another solution is to use window.scroll and to toggle fixed position on the header relative to the scrollY position. That works too but as lot of posts are saying , a scroll position listener is not so good. For a so small thing to do, your browser is always listenning the scroll.
 
-I won’t explain the “all” Intersection Observer API concept, it's well explained here
+Intersection Observer API concept is very well explained here
 
 https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 
-If you search, you'll find lot of posts explaining Intersection Observer (lot of them copy/paste the one in link!). Intersection Observer gives a callback when the element observed intersect, that’s it: no continuous listener while scrolling, low resource, and easy.
+If you search, you'll find lot of posts explaining Intersection Observer (lot of them are copy of this one!). 
 
+Intersection Observer gives a callback when the element observed intersect (in and out), that’s it: no continuous listener while scrolling, low resource, and easy.
+
+
+---
 [Test it on CodePen](https://codepen.io/pierfarrugia/pen/mdLOGBY)
 
 ![alt text](https://github.com/pierfarrugia/IntersectionObserver-headerFixed/blob/main/headerFixed.webp)
@@ -24,7 +28,7 @@ If you search, you'll find lot of posts explaining Intersection Observer (lot of
 
 
 ---
-## Basic HTML structure 
+## HTML 
 
 Very simple HTML structure:
 
@@ -39,7 +43,7 @@ Very simple HTML structure:
 
 
 ---
-## For the CSS
+## CSS
 
 - section (including heroe) have 100vh height (to have some scroll), plus odd, even background to visually see the difference
 
@@ -73,7 +77,7 @@ Scrolled-offset is to add margin-top 75px (header height) to next element after 
 
 
 ---
-## Javascript…
+## Javascript
 
 We have to observe the sentinelHeader.
 ```javascript
@@ -131,7 +135,6 @@ Now we just have to call the function, for example when window is loading:
 window.addEventListener('load', initOberverHeader);
 ```
 
-That’s it…
 Thanks for reading
 
 *(tested on Chrome, Firefox, Edge, Safari)*
