@@ -12,6 +12,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 If you search, you'll find lot of posts explaining Intersection Observer (lot of them copy/paste the one in link!). Intersection Observer gives a callback when the element observed intersect, that’s it: no continuous listener while scrolling, low resource, and easy.
 
 [Test it on CodePen](https://codepen.io/pierfarrugia/pen/mdLOGBY)
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
 
 [Read this on HTML page](https://aonecommunication.ch/content/intersectionObserverHeaderFixed.html)
 
