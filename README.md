@@ -1,5 +1,7 @@
 # Header Fixed with IntersectionObserver
-Javascript IntersectionObserver to make a Header fixed
+### Javascript IntersectionObserver to make a Header fixed ###
+
+
 
 Classical way is to use CSS “sticky” to fix header on top of screen. Main pro: it’s only a css (plus you have to add some positioning relative, absolute...). That’s working well in general, sometimes not so... Also beside sticky, you don’t do anything else.
 
@@ -19,7 +21,7 @@ Intersection Observer gives a callback when the element observed intersect (in a
 
 ![alt text](https://github.com/pierfarrugia/IntersectionObserver-headerFixed/blob/main/headerFixed.webp)
 
-[Read this on HTML page](https://aonecommunication.ch/content/intersectionObserverHeaderFixed.html)
+[Read this on HTML page](https://aonecommunication.ch/dev/creativeprog/blog.html#intersectionObserverHeaderFixed)
 
 [See it in action full screen](https://aonecommunication.ch/content/io_header_01.html)
 
