@@ -19,13 +19,11 @@ Intersection Observer gives a callback when the element observed intersect (in a
 ---
 [Test it on CodePen](https://codepen.io/pierfarrugia/pen/mdLOGBY)
 
-![alt text](https://aonecommunication.ch/content/img/portfolio/headerFixed.webp)
+![alt text](https://aonecommunication.ch/content/intersection_observer_header_fixed/headerFixed.webp)
 
-[Read this on HTML page](https://aonecommunication.ch/dev/creativeprog/blog.html#intersectionObserverHeaderFixed)
+[Read this on HTML page](https://aonecommunication.ch/content/blog.html#intersection_observer_header_fixed)
 
-[See it in action full screen](https://aonecommunication.ch/content/io_header_01.html)
-
-
+[See it in action full screen](https://aonecommunication.ch/content/intersection_observer_header_fixed/io_header_01.html)
 
 
 
