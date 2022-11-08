@@ -21,7 +21,7 @@ Intersection Observer gives a callback when the element observed intersect (in a
 
 ![alt text](https://aonecommunication.ch/content/intersection_observer_header_fixed/headerFixed.webp)
 
-[Read this on HTML page](https://aonecommunication.ch/content/blog.html#intersection_observer_header_fixed)
+[Read this on HTML page](https://aonecommunication.ch/blog.html#intersection_observer_header_fixed)
 
 [See it in action full screen](https://aonecommunication.ch/content/intersection_observer_header_fixed/io_header_01.html)
 
